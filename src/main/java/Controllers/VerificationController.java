@@ -32,20 +32,26 @@ private boolean logueado = false;
  
     
     public String signUp(){
+        try{
          UsuarioDao dao = new UsuarioDao();
          Usuario usr = new Usuario(this.id,this.nombre,this.apellido1,this.email,this.contrasena);
          dao.insert(usr);
           if (usr!= null) {
 
             System.out.println(usr.getNombre());
-           
-            this.redirect("/faces/usermails?faces-redirect=true&idUsuario= " + this.usuario.getId());
+             this.redirect("index");
+
+          
 
         } else {
             FacesContext.getCurrentInstance().addMessage("growl", new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error", "Invalid User"));
         }
-        return "succesfull signUp";
+    
 
+    }catch (NullPointerException e) {
+      System.out.println("Something went wrong.");
+    }
+        return null;
     }
     public String login ()throws SQLException, ClassNotFoundException {
      UsuarioDao usr = new UsuarioDao();
