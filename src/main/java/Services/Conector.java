@@ -16,7 +16,7 @@ import java.sql.Statement;
 public class Conector  implements Serializable{
 
         String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-        String DB_URL = "jdbc:mysql://localhost:3306/mail?zeroDateTimeBehavior=convertToNull";
+        String DB_URL = "jdbc:mysql://34.133.24.43:3306/mail?zeroDateTimeBehavior=convertToNull";
 //  Database credentials
         String USER = "root";
         String PASS = "admin";
