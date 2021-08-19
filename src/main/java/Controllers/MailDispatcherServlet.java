@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author User///////
+ * @author User////////
  */
 @WebServlet(name = "MailDispatcherServlet", urlPatterns = {"/MailDispatcherServlet"})
 public class MailDispatcherServlet extends HttpServlet {
